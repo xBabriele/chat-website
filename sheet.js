@@ -1,8 +1,10 @@
-let invio = document.getElementsByClassName("button")[0];
-let chat = document.getElementsByClassName("chat")[0];
-let barra = document.getElementsByClassName("barra")[0];
 
+// Dichiarazione e inizializzazione delle variabili che andranno a riferirsi ai nodi del HTML
+let invio = document.getElementsByClassName("button")[0];   // Immagine che diventerà il bottone per inviare i vari messaggi
+let chat = document.getElementsByClassName("chat")[0];      // Div della chat in cui si conterranno i messaggi dell'array qui sotto
+let barra = document.getElementsByClassName("barra")[0];    // Div della barra sopra per aggiungere l'ora e la data
 
+// Oggetto Date che servirà per ottenere l'ora e la data di oggi
 let data = new Date();
 barra.innerHTML += `<p style="text-align: center;">
         ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}
@@ -10,6 +12,9 @@ barra.innerHTML += `<p style="text-align: center;">
     <p style="text-align: right;">${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}</p>`
 ;
 
+// Array che contiene i messaggi da inviare in ordine, msgD per i destinatare e msgM per i messaggi del mittente;
+// format messaggio:
+// `<div class="msgD/msgM"><h4 style="color: COLORE-NomePersona;">NomePersona</h4><p>MESSAGGIO</p><p style="text-align: right; color: #BBB;">${data.getHours()}:${data.getMinutes()}</p></div>`
 let array = [
     `<div class="msgD"><h4 style="color: green;">Voltaire</h4><p>Amici, sono davvero perplesso! Possiamo chattare con chiunque, persino con un uomo che ha viaggiato in mondi lontani! Gulliver, sei con noi? Raccontaci delle tue avventure nei regni lontani, che ci dici della tua esperienza in Lilliput?</p><p style="text-align: right; color: #BBB;">${data.getHours()}:${data.getMinutes()}</p></div>`,
     `<div class="msgM"><p>Ciao a tutti! È strano parlare con voi attraverso questa… macchina. Comunque, per quanto riguarda Lilliput, beh, la cosa che mi colpì di più fu come i piccoli poteri della società si concentrassero su dispute insignificanti. Le guerre, la politica, e la burocrazia erano tutte questioni che non avevano senso per me, visto che il mio corpo era così enorme rispetto a loro. Come avete osservato, è una satira della vanità umana.</p><p style="text-align: right; color: #BBB;">${data.getHours()}:${data.getMinutes()}</p></div>`,
@@ -37,7 +42,9 @@ let array = [
 ];
 let index=0;
 
+// Handler dell'evento
 function invioM(event) {
+    // Se si supera il numero di messaggi non andrà a inviarne più, senza inviare 'undefined'
     if (index < array.length) {
         chat.innerHTML += array[index];
         index++;
