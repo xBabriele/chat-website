@@ -26,6 +26,7 @@
 }
 
 
+
 html {
 	scrollbar-width: none;
 	font-family: Arial, Helvetica, sans-serif;
@@ -46,7 +47,7 @@ body {
 
 .barra {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;	/* Nome	| Ora:min:sec | day/month/year */
 	align-content: center;
 	height: 30px;
 	background-color: #04463c;
@@ -61,9 +62,10 @@ body {
 	letter-spacing: 1.5px;
 }
 
+
 .header {
 	display: grid;
-	grid-template-columns: 1fr 5fr 1fr 1fr;
+	grid-template-columns: 1fr 5fr 1fr 1fr;		/* pfp | Nome gruppo | img | img */
 	gap: 15px;
 	padding: 0 10px;
 	align-items: center;
@@ -74,9 +76,10 @@ body {
 	margin: 0;
 }
 
+
 .chat {
 	height: 675px;
-	background-image: url(img/background.jpg);
+	background-image: url(img/background.jpg);	/* Background della chat */
 	display: flex;
 	align-content: flex-end;
 	flex-wrap: wrap;
@@ -85,6 +88,7 @@ body {
 	color: white;
 	transition: ease 1s;
 }
+/* Messaggio del destinatore (messaggi ricevuti) */
 .msgD {
 	width: 60%;
 	background-color: #444;
@@ -93,25 +97,24 @@ body {
 	overflow-wrap: break-word;
 	overflow: hidden;
 	box-shadow: 8.5px 8.5px 7px #888;
-	/*animation: invioMsg 1s 1;*/
 }
 .msgD p, h4 {
 	margin: 10px;
 }
-.msgD h4 {
-	color: #d36d00;
-}
+
+/* Messaggio del mittente (messaggi inviati) */
 .msgM {
 	width: 60%;
 	background-color: #075e54;
 	margin: 15px 10px 10px 40%;
 	border-radius: 15px 0 15px 15px;
 	box-shadow: -8.5px 8.5px 7px #888;
-	/*animation: invioMsg 1s;*/
 }
 .msgM p {
 	margin: 10px;
 }
+
+
 
 .footer {
 	display: flex;
@@ -133,7 +136,7 @@ body {
 	border-radius: 10px;
 	cursor: text;
 }
-
+/* Bottone per l'invio dei messaggi */
 .footer img {
 	width: 35px;
 	margin: 10px 0;
@@ -144,10 +147,3 @@ body {
 	margin: 5px 0;
 	filter: drop-shadow(7px 7px 6px #333);
 }
-
-/*
-@keyframes invioMsg {
-	from { opacity: 0;}
-	to {}
-}
-*/
