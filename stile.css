@@ -1,0 +1,153 @@
+@media screen and (max-width: 768px) {
+    .telefono {
+        max-width: 90%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .telefono {
+        max-width: 60%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .telefono {
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .telefono {
+        max-width: 45%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .telefono {
+        max-width: 27%;
+    }
+}
+
+
+html {
+	scrollbar-width: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	margin: 0;
+	background-color: #CCC;
+}
+
+.telefono {
+	height: 865px;
+	margin: 16px auto;
+	border: 7px solid #333;
+	border-radius: 20px;
+	color: #DDD;
+	background-color: #333;
+}
+
+.barra {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-content: center;
+	height: 30px;
+	background-color: #04463c;
+	color: white;
+	border-radius: 13px 13px 0 0;
+	flex-wrap: wrap;
+	padding: 0 40px;
+}
+.barra p {
+	margin: 0;
+	font-size: small;
+	letter-spacing: 1.5px;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr 1fr;
+	gap: 15px;
+	padding: 0 10px;
+	align-items: center;
+	height: 87px;
+	background-color: #06534a;
+}
+.header h3 {
+	margin: 0;
+}
+
+.chat {
+	height: 675px;
+	background-image: url(img/background.jpg);
+	display: flex;
+	align-content: flex-end;
+	flex-wrap: wrap;
+	color: black;
+	overflow: hidden;
+	color: white;
+	transition: ease 1s;
+}
+.msgD {
+	width: 60%;
+	background-color: #444;
+	margin: 15px 10px;
+	border-radius: 0 15px 15px;
+	overflow-wrap: break-word;
+	overflow: hidden;
+	box-shadow: 8.5px 8.5px 7px #888;
+	/*animation: invioMsg 1s 1;*/
+}
+.msgD p, h4 {
+	margin: 10px;
+}
+.msgD h4 {
+	color: #d36d00;
+}
+.msgM {
+	width: 60%;
+	background-color: #075e54;
+	margin: 15px 10px 10px 40%;
+	border-radius: 15px 0 15px 15px;
+	box-shadow: -8.5px 8.5px 7px #888;
+	/*animation: invioMsg 1s;*/
+}
+.msgM p {
+	margin: 10px;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	align-content: center;
+	min-height: 72px;
+	background-image: url(img/background.jpg);
+	border-radius: 0 0 13px 13px;
+	flex-wrap: nowrap;
+}
+.msg {
+	width: 70%;
+	margin: 12px 0;
+	padding: 15px 20px;
+	background-color: #444;
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	cursor: text;
+}
+
+.footer img {
+	width: 35px;
+	margin: 10px 0;
+	transition: ease 0.3s;
+}
+.footer img:hover {
+	width: 40px;
+	margin: 5px 0;
+	filter: drop-shadow(7px 7px 6px #333);
+}
+
+/*
+@keyframes invioMsg {
+	from { opacity: 0;}
+	to {}
+}
+*/
