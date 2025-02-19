@@ -3,20 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Gabriel Madiotto & Filippo Gorghetto">
+	<meta name="author" content="Gabriel Madiotto">
 	<title>Chat con Illuministi</title>
-	<meta name="description" content="Sito che visualizza un telefono in cui all'interno si ha un gruppo chat con vari illuministi del '700 come Locke, Voltaire, Diderot... Per inviare il prossimo messaggio premere il pulsante invia, che si trova in basso a destra del telefono">
+	<meta name="description" content="Sito che visualizza un telefono in cui all'interno si ha un gruppo chat, ispirato allo stile di 'WhatsApp', con vari illuministi del '700 come Locke, Voltaire, Diderot... Per inviare il prossimo messaggio premere il pulsante invia, che si trova in basso a destra del telefono">
 	<meta name="dc.language" content="ita">
 	<meta name="robots" content="none">
 
-	<link rel="stylesheet" type="text/css" href="stile.css">
-	<link rel="website icon" type="pn" href="img/gulliver.png">
+	<link rel="stylesheet" type="text/css" href="stile.css">	<!-- Collegamento al file css "stile.css" -->
+	<link rel="website icon" type="pn" href="img/gulliver.png">	<!-- Icona della tab del sito (Gulliver Lemuel, personaggio creato da Jonathan Swift) -->
 </head>
 <body>
+	<!-- div contenitore che contiene tutti i componenti del sito -->
 	<div class="telefono">
+		<!-- Barra in alto del telefono per simulare la parte alta di un telefono, all'interno si ha anche l'ora e la data del giorno (si aggiornerà qualvolta andiate ad aggiornare la pagina) -->
 		<div class="barra">
 			<p>Madiotto&Gorghetto</p>
 		</div>
+		<!-- Header della chat di gruppo in cui si visualizza foto, nome e partecipanti del gruppo -->
 		<div class="header">
 			<img src="img/swift.jpg" style="width: 70px; border-radius: 100%;">
 			<h3>Chat con Illuministi</h3>
@@ -24,9 +27,11 @@
 			<img src="img/telefono.png" style="width: 30px;">
 		</div>
 
+		<!-- Qui ci saranno tutti i messaggi inviati attraverso javascript -->
 		<div class="chat">
 		</div>
 
+		<!-- Parte del telefono dove si andrà a inviare i messaggi alla chat attraverso il pulsante che è l'immagine messa alla fine -->
 		<div class="footer">
 			<div class="msg">
 				<p style="margin: 0;">Messaggio</p>
