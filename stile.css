@@ -37,24 +37,26 @@ body {
 }
 
 .telefono {
-	height: 865px;
+	height: 96vh;
+	min-height: 730px;
+	box-sizing: border-box;
 	margin: 16px auto;
 	border: 7px solid #333;
 	border-radius: 20px;
 	color: #DDD;
-	background-color: #333;
+	background-image: url(img/background.jpg);	/* Background della chat */
 }
 
 .barra {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;	/* Nome	| Ora:min:sec | day/month/year */
 	align-content: center;
-	height: 30px;
+	justify-items: center;
+	height: 3%;
+	box-sizing: border-box;
 	background-color: #04463c;
 	color: white;
-	border-radius: 13px 13px 0 0;
-	flex-wrap: wrap;
-	padding: 0 40px;
+	border-radius: 11px 11px 0 0;
 }
 .barra p {
 	margin: 0;
@@ -69,7 +71,8 @@ body {
 	gap: 15px;
 	padding: 0 10px;
 	align-items: center;
-	height: 87px;
+	height: 10%;
+	box-sizing: border-box;
 	background-color: #06534a;
 }
 .header h3 {
@@ -78,25 +81,28 @@ body {
 
 
 .chat {
-	height: 675px;
-	background-image: url(img/background.jpg);	/* Background della chat */
-	display: flex;
-	align-content: flex-end;
-	flex-wrap: wrap;
+	height: 78.5%;
+	box-sizing: border-box;
+	display: grid;
+	align-items: end;
+	grid-template-rows: 1fr;
 	color: black;
-	overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+	scrollbar-color: #0a8e7f rgba(0, 0, 0, 0);
 	color: white;
 	transition: ease 1s;
 }
 /* Messaggio del destinatore (messaggi ricevuti) */
 .msgD {
 	width: 60%;
+	height: fit-content;
 	background-color: #444;
 	margin: 15px 10px;
 	border-radius: 0 15px 15px;
 	overflow-wrap: break-word;
-	overflow: hidden;
-	box-shadow: 8.5px 8.5px 7px #888;
 }
 .msgD p, h4 {
 	margin: 10px;
@@ -105,29 +111,34 @@ body {
 /* Messaggio del mittente (messaggi inviati) */
 .msgM {
 	width: 60%;
+	height: fit-content;
 	background-color: #075e54;
 	margin: 15px 10px 10px 40%;
 	border-radius: 15px 0 15px 15px;
-	box-shadow: -8.5px 8.5px 7px #888;
 }
 .msgM p {
 	margin: 10px;
 }
-
+.msgD#lastChild {
+	animation: .3s inviatoD 1;
+}
+.msgM#lastChild {
+	animation: .3s inviatoM 1;
+}
 
 
 .footer {
-	display: flex;
-	justify-content: space-evenly;
-	align-content: center;
-	min-height: 72px;
-	background-image: url(img/background.jpg);
+	display: grid;
+	grid-template-columns: 5fr 1fr;
+	justify-items: center;
+	align-items: center;
+	height: 8.5%;
 	border-radius: 0 0 13px 13px;
 	flex-wrap: nowrap;
 }
 .msg {
-	width: 70%;
-	margin: 12px 0;
+	width: 85%;
+	margin: 12px 15px;
 	padding: 15px 20px;
 	background-color: #444;
 	display: flex;
@@ -138,12 +149,23 @@ body {
 }
 /* Bottone per l'invio dei messaggi */
 .footer img {
-	width: 35px;
-	margin: 10px 0;
+	width: 50px;
 	transition: ease 0.3s;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 .footer img:hover {
-	width: 40px;
-	margin: 5px 0;
-	filter: drop-shadow(7px 7px 6px #333);
+	width: 60px;
+	filter: drop-shadow(8px 8px 3px #555);
+}
+
+
+@keyframes inviatoM {
+	from { opacity: 0; transform: translateX(150px); }
+	to { opacity: 1; }
+}
+@keyframes inviatoD {
+	from { opacity: 0; transform: translateX(-150px); }
+	to { opacity: 1; }
 }
