@@ -130,6 +130,7 @@ body {
 .footer {
 	display: grid;
 	grid-template-columns: 5fr 1fr;
+	gap: 10px;
 	justify-items: center;
 	align-items: center;
 	height: 8.5%;
@@ -137,7 +138,7 @@ body {
 	flex-wrap: nowrap;
 }
 .msg {
-	width: 85%;
+	width: 80%;
 	margin: 12px 15px;
 	padding: 15px 20px;
 	background-color: #444;
